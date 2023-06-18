@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+
+        <!-- Three columns of text below the carousel -->
+        <h3>Nos meilleurs ventes</h3>
+        <p>Découvrez les articles les plus vendus.</p>
+        <div class="row">
+          {% for product in products %}
+            <div class="col-md-3">
+                    {% include 'product/single_product.html.twig' %}
+            </div>
+          {% endfor %}
+        </div><!-- /.row -->
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">La qualidad. <span class="text-muted">Ça va vous épater.</span></h2>
+                <p class="lead">Découvrez notre incroyable collection de vêtements. Des articles tendance et de qualité à des prix défiant toute concurrence. Vous serez séduit par notre sélection variée et à la pointe de la mode.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('assets/img/first.jpeg')}}" class="img-fluid" alt="Un savoir-faire français">
+            </div>
+        </div>
+        
+        <hr class="featurette-divider">
+        
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Oui, oui on est la depuis 1920 <span class="text-muted">Voyez par vous-même la qualidad.</span></h2>
+                <p class="lead">Découvrez nos articles de mode uniques et originaux. Nous mettons l'accent sur la qualité et le style pour vous offrir une expérience de shopping exceptionnelle. Ne manquez pas nos offres incroyables sur les dernières tendances de la mode.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="{{ asset('assets/img/second.jpeg')}}" class="img-fluid" alt="Un savoir-faire français">
+            </div>
+        </div>
+        
+        <hr class="featurette-divider">
+        
+
+{% endblock %}
